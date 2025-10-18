@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dosqso17q7q1s"]
+[gd_scene load_steps=6 format=3 uid="uid://dosqso17q7q1s"]
 
 [ext_resource type="PackedScene" uid="uid://ct078crwynb1x" path="res://entities/player.tscn" id="1_5kiuu"]
+[ext_resource type="PackedScene" uid="uid://bsenx2dme7bcc" path="res://entities/onça.tscn" id="2_dbls1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4st5"]
 size = Vector2(395.77393, 69.895325)
@@ -52,4 +53,8 @@ shape = SubResource("RectangleShape2D_dbls1")
 debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_5kiuu")]
-position = Vector2(202, -130)
+position = Vector2(242, -126)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_dbls1")]
+position = Vector2(59, 297)
+scale = Vector2(0.36774406, 0.59221345)
