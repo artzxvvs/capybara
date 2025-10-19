@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://cla5ytfcdkl3a"]
+
+[ext_resource type="Script" uid="uid://c1g7vsuul2pdg" path="res://entities/mosca.gd" id="2_00ngv"]
+[ext_resource type="Texture2D" uid="uid://dd4lxt4iuf0lg" path="res://sprites/5 - Moe Scotty - Copia/Flying_(32 x 32).png" id="2_0s20a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otpxw"]
+atlas = ExtResource("2_0s20a")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwmos"]
+atlas = ExtResource("2_0s20a")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp2md"]
+atlas = ExtResource("2_0s20a")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1k13"]
+atlas = ExtResource("2_0s20a")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4cahq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otpxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwmos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp2md")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1k13")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00ngv"]
+size = Vector2(37.23909, 20.777351)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0s20a"]
+size = Vector2(31, 18)
+
+[node name="mosca" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("2_00ngv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.21175385, 0.44843864)
+scale = Vector2(-1.2007346, 0.7155274)
+sprite_frames = SubResource("SpriteFrames_4cahq")
+animation = &"walk"
+frame_progress = 0.73915386
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.21175194, 0.44843864)
+shape = SubResource("RectangleShape2D_00ngv")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_0s20a")
+debug_color = Color(0.76862746, 0, 0.003921569, 0.1764706)

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://blmwo0ohccu8j"]
+
+[ext_resource type="PackedScene" uid="uid://cla5ytfcdkl3a" path="res://entities/mosca.tscn" id="1_mjbgy"]
+[ext_resource type="PackedScene" uid="uid://d3x43o5eo4uik" path="res://entities/node_2d.tscn" id="2_pnvwr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="mosca" parent="." instance=ExtResource("1_mjbgy")]
+position = Vector2(249, 77)
+
+[node name="Node2D" parent="." instance=ExtResource("2_pnvwr")]
+position = Vector2(1, 2)

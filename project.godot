@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Capy"
-run/main_scene="uid://dosqso17q7q1s"
+run/main_scene="uid://blmwo0ohccu8j"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=540
+window/size/viewport_height=360
 
 [rendering]
 
