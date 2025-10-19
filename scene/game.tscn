@@ -51,5 +51,11 @@ scale = Vector2(1.3378546, 1.8198416)
 shape = SubResource("RectangleShape2D_dbls1")
 debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
 
+[node name="onça teste" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(27, 490)
+scale = Vector2(1.3378546, 1.8198416)
+shape = SubResource("RectangleShape2D_dbls1")
+debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
+
 [node name="Player" parent="." instance=ExtResource("1_5kiuu")]
 position = Vector2(202, -130)
