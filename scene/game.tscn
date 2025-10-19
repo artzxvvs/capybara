@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dosqso17q7q1s"]
+[gd_scene load_steps=8 format=3 uid="uid://dosqso17q7q1s"]
 
 [ext_resource type="PackedScene" uid="uid://ct078crwynb1x" path="res://entities/player.tscn" id="1_5kiuu"]
 [ext_resource type="PackedScene" uid="uid://cla5ytfcdkl3a" path="res://entities/mosca.tscn" id="2_dbls1"]
@@ -6,66 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://buvrji0qmm3su" path="res://sprites/life/vida.png" id="4_xwcet"]
 [ext_resource type="Texture2D" uid="uid://nciwuy6u2d1y" path="res://sprites/life/sem life.png" id="5_p1ry8"]
 [ext_resource type="Texture2D" uid="uid://bgqofq1m0pqk3" path="res://sprites/capys/cabeça.png" id="6_xlg7c"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4st5"]
-size = Vector2(395.77393, 69.895325)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kiuu"]
-size = Vector2(81.00427, 17.363708)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbls1"]
-size = Vector2(81.00427, 17.363708)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xlg7c"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpk70"]
-size = Vector2(90, 17)
+[ext_resource type="PackedScene" uid="uid://c25l3vfecw6o2" path="res://scene/parallax.tscn" id="7_qpk70"]
 
 [node name="Game" type="Node2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(888, 582)
-scale = Vector2(1.3378546, 1.8198416)
-shape = SubResource("RectangleShape2D_n4st5")
-debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(263, 584)
-scale = Vector2(1.3378546, 1.8198416)
-shape = SubResource("RectangleShape2D_n4st5")
-debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(576, 484)
-scale = Vector2(1.3378546, 1.8198416)
-shape = SubResource("RectangleShape2D_5kiuu")
-debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(718.00006, 452)
-scale = Vector2(1.3378546, 1.8198416)
-shape = SubResource("RectangleShape2D_5kiuu")
-debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(862, 413)
-scale = Vector2(1.3378546, 1.8198416)
-shape = SubResource("RectangleShape2D_dbls1")
-debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1015, 376)
-scale = Vector2(1.3378546, 1.8198416)
-shape = SubResource("RectangleShape2D_dbls1")
-debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
-
-[node name="onça teste" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(27, 490)
-scale = Vector2(1.3378546, 1.8198416)
-shape = SubResource("RectangleShape2D_dbls1")
-debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_5kiuu")]
 position = Vector2(202, -130)
@@ -121,11 +64,5 @@ texture = ExtResource("6_xlg7c")
 
 [node name="inimigo" type="Node" parent="."]
 
-[node name="Area2D" type="Area2D" parent="inimigo"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="inimigo/Area2D"]
-sprite_frames = SubResource("SpriteFrames_xlg7c")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo/Area2D/AnimatedSprite2D"]
-position = Vector2(48, 0.5)
-shape = SubResource("RectangleShape2D_qpk70")
+[node name="Parallax" parent="." instance=ExtResource("7_qpk70")]
+position = Vector2(6, 856)

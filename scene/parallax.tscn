@@ -11,7 +11,7 @@ follow_viewport_enabled = true
 [node name="Ceu" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(132.00002, -71.00001)
+position = Vector2(132, 368.99994)
 scale = Vector2(6.5338364, 1.9068472)
 motion_mirroring = Vector2(367, 0)
 
@@ -23,7 +23,7 @@ centered = false
 [node name="Floresta" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(140, -165)
+position = Vector2(139.99998, 275)
 motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Floresta"]
