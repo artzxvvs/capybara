@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://c25l3vfecw6o2"]
+
+[ext_resource type="Texture2D" uid="uid://bkl3mftuwau3q" path="res://sprites/background/ceu.webp" id="1_veugv"]
+[ext_resource type="Texture2D" uid="uid://dlnji58xd0umi" path="res://sprites/background/ceu.png" id="2_veugv"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_enabled = true
+
+[node name="Ceu" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(132.00002, -71.00001)
+scale = Vector2(6.5338364, 1.9068472)
+motion_mirroring = Vector2(367, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Ceu"]
+position = Vector2(-21, 35)
+texture = ExtResource("1_veugv")
+centered = false
+
+[node name="Floresta" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(140, -165)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Floresta"]
+texture_filter = 1
+position = Vector2(-137, -16)
+texture = ExtResource("2_veugv")
+centered = false
