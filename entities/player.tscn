@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ct078crwynb1x"]
+[gd_scene load_steps=21 format=3 uid="uid://ct078crwynb1x"]
 
 [ext_resource type="Script" uid="uid://c1kkafdwb08up" path="res://scripts/player.gd" id="1_merdl"]
 [ext_resource type="Texture2D" uid="uid://byfjbrc2g7wdn" path="res://sprites/capys/jump_4.png" id="2_ef06p"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cpa4yj8j0avny" path="res://sprites/capys/walking_3.png" id="4_6nm46"]
 [ext_resource type="Texture2D" uid="uid://cpnt88gx5nxgy" path="res://sprites/capys/jump_3.png" id="5_dchgp"]
 [ext_resource type="Texture2D" uid="uid://p68yt0edf3mw" path="res://sprites/capys/walking_4.png" id="5_i623q"]
+[ext_resource type="PackedScene" uid="uid://cf2fuhj345y0t" path="res://scene/quantidade_de_vidas.tscn" id="9_ef06p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdgjc"]
 atlas = ExtResource("2_ef06p")
@@ -103,7 +104,6 @@ scale = Vector2(0.2366089, 0.26654613)
 sprite_frames = SubResource("SpriteFrames_fruft")
 animation = &"jumping"
 autoplay = "idle"
-frame_progress = 0.6093395
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -115,3 +115,5 @@ shape = SubResource("CapsuleShape2D_slxql")
 position = Vector2(50, 617)
 limit_left = 0
 position_smoothing_enabled = true
+
+[node name="quantidade_de_vidas" parent="." instance=ExtResource("9_ef06p")]

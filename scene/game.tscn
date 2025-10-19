@@ -1,6 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dosqso17q7q1s"]
+[gd_scene load_steps=12 format=3 uid="uid://dosqso17q7q1s"]
 
 [ext_resource type="PackedScene" uid="uid://ct078crwynb1x" path="res://entities/player.tscn" id="1_5kiuu"]
+[ext_resource type="PackedScene" uid="uid://cla5ytfcdkl3a" path="res://entities/mosca.tscn" id="2_dbls1"]
+[ext_resource type="Script" uid="uid://ccgff7cdpe8nu" path="res://scripts/quantidade_de_vidas.gd" id="3_33cqm"]
+[ext_resource type="Texture2D" uid="uid://buvrji0qmm3su" path="res://sprites/life/vida.png" id="4_xwcet"]
+[ext_resource type="Texture2D" uid="uid://nciwuy6u2d1y" path="res://sprites/life/sem life.png" id="5_p1ry8"]
+[ext_resource type="Texture2D" uid="uid://bgqofq1m0pqk3" path="res://sprites/capys/cabeça.png" id="6_xlg7c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4st5"]
 size = Vector2(395.77393, 69.895325)
@@ -10,6 +15,11 @@ size = Vector2(81.00427, 17.363708)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dbls1"]
 size = Vector2(81.00427, 17.363708)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xlg7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpk70"]
+size = Vector2(90, 17)
 
 [node name="Game" type="Node2D"]
 
@@ -59,3 +69,63 @@ debug_color = Color(0.19370499, 0.6293343, 0.36188954, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_5kiuu")]
 position = Vector2(202, -130)
+
+[node name="mosca" parent="." instance=ExtResource("2_dbls1")]
+position = Vector2(104, 224)
+
+[node name="segura_fixo_na_tela_informacao" type="CanvasLayer" parent="."]
+
+[node name="quantidade_de_vidas" type="Label" parent="segura_fixo_na_tela_informacao"]
+visible = false
+offset_left = 26.0
+offset_top = -2.0
+offset_right = 66.0
+offset_bottom = 21.0
+text = "999"
+script = ExtResource("3_33cqm")
+
+[node name="Life" type="Sprite2D" parent="segura_fixo_na_tela_informacao"]
+position = Vector2(103.99999, 64)
+scale = Vector2(0.6300505, 0.73295444)
+texture = ExtResource("4_xwcet")
+
+[node name="Life2" type="Sprite2D" parent="segura_fixo_na_tela_informacao"]
+position = Vector2(160, 64.00001)
+scale = Vector2(0.64646447, 0.7272726)
+texture = ExtResource("4_xwcet")
+
+[node name="Life3" type="Sprite2D" parent="segura_fixo_na_tela_informacao"]
+position = Vector2(216, 63.999992)
+scale = Vector2(0.66351014, 0.7414773)
+texture = ExtResource("4_xwcet")
+
+[node name="nolife" type="Sprite2D" parent="segura_fixo_na_tela_informacao"]
+position = Vector2(103.99999, 64)
+scale = Vector2(1.7599999, 1.8909088)
+texture = ExtResource("5_p1ry8")
+
+[node name="nolife2" type="Sprite2D" parent="segura_fixo_na_tela_informacao"]
+position = Vector2(160, 64)
+scale = Vector2(1.7599999, 1.8909088)
+texture = ExtResource("5_p1ry8")
+
+[node name="nolife3" type="Sprite2D" parent="segura_fixo_na_tela_informacao"]
+position = Vector2(216, 64)
+scale = Vector2(1.7599999, 1.8909088)
+texture = ExtResource("5_p1ry8")
+
+[node name="cabeça" type="Sprite2D" parent="segura_fixo_na_tela_informacao"]
+position = Vector2(0, 80)
+scale = Vector2(0.5048544, 0.43114403)
+texture = ExtResource("6_xlg7c")
+
+[node name="inimigo" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="inimigo"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="inimigo/Area2D"]
+sprite_frames = SubResource("SpriteFrames_xlg7c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inimigo/Area2D/AnimatedSprite2D"]
+position = Vector2(48, 0.5)
+shape = SubResource("RectangleShape2D_qpk70")

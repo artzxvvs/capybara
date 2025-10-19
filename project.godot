@@ -15,6 +15,10 @@ run/main_scene="uid://dosqso17q7q1s"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Dados="*res://scripts/dados.gd"
+
 [input]
 
 left={

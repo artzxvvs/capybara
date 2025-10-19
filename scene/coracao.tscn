@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bx10twd56hwex"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="vida" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(232, 68)
+
+[node name="vida2" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(55, 62)
+
+[node name="vida3" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(140, 65)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt6s53e87bp68"]
+
+[ext_resource type="PackedScene" uid="uid://ct078crwynb1x" path="res://entities/player.tscn" id="1_1skkd"]
+
+[node name="teste" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_1skkd")]
+
+[node name="segura_fixo_na_tela_informacao" type="CanvasLayer" parent="."]
+
+[node name="quantidade_de_vidas" type="Label" parent="segura_fixo_na_tela_informacao"]
+offset_right = 40.0
+offset_bottom = 23.0

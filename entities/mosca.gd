@@ -1,26 +1,36 @@
 extends CharacterBody2D
 
-@export var speed: float = 10.0
-@export var left_limit: float = -100.0
-@export var right_limit: float = 100.0
-
-var direction: int = 1
-var start_position: Vector2
+@export var speed: float = 100.0
+@export var health: int = 3
+@export var follow_distance: float = 700.0 # distância máxima para seguir
+@onready var player = null
 
 func _ready():
-	start_position = global_position
+	player = get_parent().get_node("Player") # ajuste se necessário
 
 func _physics_process(delta):
+	if player:
+		var distance = global_position.distance_to(player.global_position)
+		
+		if distance <= follow_distance:
+			var direction_x = sign(player.global_position.x - global_position.x)
+			velocity.x = direction_x * speed
+			flip()
+		else:
+			velocity.x = 0 # para quando está longe
+		
+	# Gravidade
+	velocity.y += ProjectSettings.get_setting("physics/2d/default_gravity") * delta
 	
-	velocity.x = direction * speed
 	move_and_slide()
 
-	
-	if direction == 1 and global_position.x >= start_position.x + right_limit:
-		global_position.x = start_position.x + right_limit  
-		direction = -1
-		scale.x = -1
-	elif direction == -1 and global_position.x <= start_position.x + left_limit:
-		global_position.x = start_position.x + left_limit  
-		direction = 1
-		scale.x = 1
+func flip():
+	if velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	elif velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
+
+func take_damage(amount: int):
+	health -= amount
+	if health <= 0:
+		queue_free()
