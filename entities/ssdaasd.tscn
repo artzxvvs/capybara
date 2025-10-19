@@ -6,7 +6,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="mosca" parent="." instance=ExtResource("1_mjbgy")]
-position = Vector2(249, 77)
+position = Vector2(103, 84)
 
 [node name="Node2D" parent="." instance=ExtResource("2_pnvwr")]
 position = Vector2(1, 2)
