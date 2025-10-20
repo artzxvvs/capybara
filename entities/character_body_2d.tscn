@@ -79,6 +79,7 @@ script = ExtResource("1_svect")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(111, 162)
+scale = Vector2(0.54514855, 0.4425942)
 sprite_frames = SubResource("SpriteFrames_svect")
 animation = &"idle"
 autoplay = "idle"
@@ -86,5 +87,5 @@ frame_progress = 0.2638901
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(103, 171)
-scale = Vector2(1.0025873, 1)
+scale = Vector2(0.54655904, 0.4425942)
 shape = SubResource("RectangleShape2D_r52hb")

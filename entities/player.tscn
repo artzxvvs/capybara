@@ -99,21 +99,28 @@ height = 114.6543
 script = ExtResource("1_merdl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(44.000008, 617)
+position = Vector2(48.52001, 449.664)
 scale = Vector2(0.2366089, 0.26654613)
 sprite_frames = SubResource("SpriteFrames_fruft")
 animation = &"jumping"
 autoplay = "idle"
 
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(27.386972, -2.4911108)
+limit_left = 0
+limit_top = 50
+limit_bottom = 489
+position_smoothing_enabled = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(50, 617)
+position = Vector2(52.000008, 453)
 scale = Vector2(0.36631858, 0.43999752)
 shape = SubResource("CapsuleShape2D_slxql")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(50, 617)
-limit_left = 0
-position_smoothing_enabled = true
-
 [node name="quantidade_de_vidas" parent="." instance=ExtResource("9_ef06p")]
+offset_left = -22.999996
+offset_top = -179.0
+offset_right = 33.0
+offset_bottom = -156.0
+metadata/_edit_use_anchors_ = true

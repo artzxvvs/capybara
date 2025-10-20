@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dacr0at4s1q8d"
-path="res://.godot/imported/Background1.png-599d84321a0cdf9955d176a9a0dd2438.ctex"
+uid="uid://ccstc6fswuvnp"
+path="res://.godot/imported/pedra.png-caf4388ab13cd81660c7ae4e8ebb706a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/background/Background1.png"
-dest_files=["res://.godot/imported/Background1.png-599d84321a0cdf9955d176a9a0dd2438.ctex"]
+source_file="res://sprites/obstaculos/pedra.png"
+dest_files=["res://.godot/imported/pedra.png-caf4388ab13cd81660c7ae4e8ebb706a.ctex"]
 
 [params]
 

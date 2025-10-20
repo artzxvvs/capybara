@@ -1,20 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://dosqso17q7q1s"]
+[gd_scene load_steps=12 format=3 uid="uid://dosqso17q7q1s"]
 
 [ext_resource type="PackedScene" uid="uid://ct078crwynb1x" path="res://entities/player.tscn" id="1_5kiuu"]
 [ext_resource type="PackedScene" uid="uid://cla5ytfcdkl3a" path="res://entities/mosca.tscn" id="2_dbls1"]
 [ext_resource type="Script" uid="uid://ccgff7cdpe8nu" path="res://scripts/quantidade_de_vidas.gd" id="3_33cqm"]
+[ext_resource type="PackedScene" uid="uid://bmvpyqg7lmaso" path="res://entities/character_body_2d.tscn" id="3_ll5lq"]
 [ext_resource type="Texture2D" uid="uid://buvrji0qmm3su" path="res://sprites/life/vida.png" id="4_xwcet"]
 [ext_resource type="Texture2D" uid="uid://nciwuy6u2d1y" path="res://sprites/life/sem life.png" id="5_p1ry8"]
 [ext_resource type="Texture2D" uid="uid://bgqofq1m0pqk3" path="res://sprites/capys/cabeça.png" id="6_xlg7c"]
-[ext_resource type="PackedScene" uid="uid://c25l3vfecw6o2" path="res://scene/parallax.tscn" id="7_qpk70"]
+[ext_resource type="PackedScene" uid="uid://co5ppa7llifsb" path="res://scene/parallax.tscn" id="7_qpk70"]
+[ext_resource type="PackedScene" uid="uid://dedgg0wfb8j81" path="res://scene/itens_spawn.tscn" id="9_17rxn"]
+[ext_resource type="PackedScene" uid="uid://br8mrdeya2uy" path="res://scene/plataforma.tscn" id="10_yq8tf"]
+[ext_resource type="PackedScene" uid="uid://7ms54asnvg5f" path="res://scene/rock.tscn" id="11_ym5sv"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_5kiuu")]
-position = Vector2(202, -130)
+[node name="Player" parent="." groups=["player"] instance=ExtResource("1_5kiuu")]
+position = Vector2(123, -69)
+
+[node name="onça" parent="." instance=ExtResource("3_ll5lq")]
+position = Vector2(-59, 193)
 
 [node name="mosca" parent="." instance=ExtResource("2_dbls1")]
-position = Vector2(104, 224)
+position = Vector2(8, 163)
 
 [node name="segura_fixo_na_tela_informacao" type="CanvasLayer" parent="."]
 
@@ -64,5 +71,11 @@ texture = ExtResource("6_xlg7c")
 
 [node name="inimigo" type="Node" parent="."]
 
-[node name="Parallax" parent="." instance=ExtResource("7_qpk70")]
-position = Vector2(6, 856)
+[node name="parallex" parent="." instance=ExtResource("7_qpk70")]
+
+[node name="itens_spawn" parent="." instance=ExtResource("9_17rxn")]
+position = Vector2(627, 371)
+scale = Vector2(4.0796814, -1.3228985)
+player_path = NodePath("../Player")
+platform_scenes = Array[PackedScene]([ExtResource("10_yq8tf")])
+rock_scenes = Array[PackedScene]([ExtResource("11_ym5sv")])

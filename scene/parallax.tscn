@@ -1,33 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://c25l3vfecw6o2"]
+[gd_scene load_steps=4 format=3 uid="uid://co5ppa7llifsb"]
 
 [ext_resource type="Texture2D" uid="uid://bkl3mftuwau3q" path="res://sprites/background/ceu.webp" id="1_veugv"]
 [ext_resource type="Texture2D" uid="uid://dlnji58xd0umi" path="res://sprites/background/ceu.png" id="2_veugv"]
 
-[node name="Parallax" type="Node2D"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_43crk"]
+
+[node name="parallex" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-follow_viewport_enabled = true
 
-[node name="Ceu" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Céu" type="ParallaxLayer" parent="ParallaxBackground"]
 texture_filter = 1
-texture_repeat = 3
-position = Vector2(132, 368.99994)
-scale = Vector2(6.5338364, 1.9068472)
 motion_mirroring = Vector2(367, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Ceu"]
-position = Vector2(-21, 35)
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Céu"]
+texture_filter = 1
+position = Vector2(-2.000001, 2.9999993)
+scale = Vector2(9.463578, 1.2677321)
 texture = ExtResource("1_veugv")
 centered = false
 
 [node name="Floresta" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-texture_repeat = 3
-position = Vector2(139.99998, 275)
 motion_mirroring = Vector2(1920, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Floresta"]
 texture_filter = 1
-position = Vector2(-137, -16)
+position = Vector2(0, -288)
 texture = ExtResource("2_veugv")
 centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/StaticBody2D"]
+position = Vector2(97, 411)
+shape = SubResource("WorldBoundaryShape2D_43crk")

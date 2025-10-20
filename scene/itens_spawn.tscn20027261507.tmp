@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dedgg0wfb8j81"]
+
+[ext_resource type="Script" uid="uid://bnvr5qwvg68gp" path="res://scripts/itens_spawn.gd" id="1_oa1bh"]
+
+[node name="itens_spawn" type="Node2D"]
+script = ExtResource("1_oa1bh")
+platform_y_min_px = 15.0
+gap_min_px = 400.0
+gap_safety_factor = 1.0
