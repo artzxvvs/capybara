@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3ul65sbis02w"
-path="res://.godot/imported/jump_2.png-98b2df013498a5a1fe3141011547a2ae.ctex"
+uid="uid://d4jabhdtb0lhx"
+path="res://.godot/imported/Dinossauro_parado.webp-e28142380d38be351863ac142d40574e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/capys/jump_2.png"
-dest_files=["res://.godot/imported/jump_2.png-98b2df013498a5a1fe3141011547a2ae.ctex"]
+source_file="res://sprites/onça/Dinossauro_parado.webp"
+dest_files=["res://.godot/imported/Dinossauro_parado.webp-e28142380d38be351863ac142d40574e.ctex"]
 
 [params]
 

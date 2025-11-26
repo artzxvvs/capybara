@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p68yt0edf3mw"
-path="res://.godot/imported/walking_4.png-71ecd3e183a38d9491747fca648b8fed.ctex"
+uid="uid://dqqdkkd25ceca"
+path="res://.godot/imported/Dinossauro.webp-fad1abde4358bd6192252f3c8e88f971.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/capys/walking_4.png"
-dest_files=["res://.godot/imported/walking_4.png-71ecd3e183a38d9491747fca648b8fed.ctex"]
+source_file="res://sprites/onça/Dinossauro.webp"
+dest_files=["res://.godot/imported/Dinossauro.webp-fad1abde4358bd6192252f3c8e88f971.ctex"]
 
 [params]
 

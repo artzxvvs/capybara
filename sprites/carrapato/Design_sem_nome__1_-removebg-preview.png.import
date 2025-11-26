@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6q8em0iyag2c"
-path="res://.godot/imported/walking_2.png-dc66de6bd1b1fc9c2e57c227ac0cb88c.ctex"
+uid="uid://ctj108af27qan"
+path="res://.godot/imported/Design_sem_nome__1_-removebg-preview.png-0a2df056d504d2fea610ea2c1f0cde0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/capys/walking_2.png"
-dest_files=["res://.godot/imported/walking_2.png-dc66de6bd1b1fc9c2e57c227ac0cb88c.ctex"]
+source_file="res://sprites/carrapato/Design_sem_nome__1_-removebg-preview.png"
+dest_files=["res://.godot/imported/Design_sem_nome__1_-removebg-preview.png-0a2df056d504d2fea610ea2c1f0cde0e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgqofq1m0pqk3"
-path="res://.godot/imported/cabeça.png-580bf9421d69fcdfe80f152010651d16.ctex"
+uid="uid://byp7mb7grxak2"
+path="res://.godot/imported/Copilot_20251126_004926.png-39c60ec2bc67828eccdf563240149e1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/capys/cabeça.png"
-dest_files=["res://.godot/imported/cabeça.png-580bf9421d69fcdfe80f152010651d16.ctex"]
+source_file="res://sprites/background/Copilot_20251126_004926.png"
+dest_files=["res://.godot/imported/Copilot_20251126_004926.png-39c60ec2bc67828eccdf563240149e1d.ctex"]
 
 [params]
 
