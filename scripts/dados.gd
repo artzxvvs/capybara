@@ -1,2 +1,2 @@
 extends Node
-var  vidas:int=3
+var vidas: int = 3

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6q8em0iyag2c"
-path="res://.godot/imported/walking_2.png-dc66de6bd1b1fc9c2e57c227ac0cb88c.ctex"
+uid="uid://bs1u3nvn5rxmg"
+path="res://.godot/imported/jump 4.png-12363f80c1004e54018cbf0325233e70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/capys/walking_2.png"
-dest_files=["res://.godot/imported/walking_2.png-dc66de6bd1b1fc9c2e57c227ac0cb88c.ctex"]
+source_file="res://sprites/player/jump 4.png"
+dest_files=["res://.godot/imported/jump 4.png-12363f80c1004e54018cbf0325233e70.ctex"]
 
 [params]
 

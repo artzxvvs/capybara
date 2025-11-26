@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpnt88gx5nxgy"
-path="res://.godot/imported/jump_3.png-a308532bc65939a480879626dc4001d7.ctex"
+uid="uid://ctj108af27qan"
+path="res://.godot/imported/Design_sem_nome__1_-removebg-preview.png-0a2df056d504d2fea610ea2c1f0cde0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/capys/jump_3.png"
-dest_files=["res://.godot/imported/jump_3.png-a308532bc65939a480879626dc4001d7.ctex"]
+source_file="res://sprites/carrapato/Design_sem_nome__1_-removebg-preview.png"
+dest_files=["res://.godot/imported/Design_sem_nome__1_-removebg-preview.png-0a2df056d504d2fea610ea2c1f0cde0e.ctex"]
 
 [params]
 
