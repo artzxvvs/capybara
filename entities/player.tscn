@@ -1,15 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://b4uyanguafauh"]
+[gd_scene load_steps=13 format=3 uid="uid://b4uyanguafauh"]
 
 [ext_resource type="Script" uid="uid://bd7qm8bs4spr0" path="res://scripts/player.gd" id="1_merdl"]
-[ext_resource type="Texture2D" uid="uid://d4ad5ql78vh28" path="res://sprites/1 - Penguin/Ducking (16 x 16).png" id="2_tjdhl"]
-[ext_resource type="Texture2D" uid="uid://dlkgrfborrt7o" path="res://sprites/1 - Penguin/jump 3.png" id="3_tjdhl"]
-[ext_resource type="Texture2D" uid="uid://bjtg6ge2crgvg" path="res://sprites/1 - Penguin/walking 1.png" id="4_x08pd"]
-[ext_resource type="Texture2D" uid="uid://v2t05k7jfdu" path="res://sprites/1 - Penguin/jump 1.png" id="5_dchgp"]
-[ext_resource type="Texture2D" uid="uid://n5wiwgf6n6ip" path="res://sprites/1 - Penguin/jump 2.png" id="6_kdgjc"]
-[ext_resource type="Texture2D" uid="uid://bs1u3nvn5rxmg" path="res://sprites/1 - Penguin/jump 4.png" id="7_q0i8f"]
-[ext_resource type="Texture2D" uid="uid://2xwvevobg7xs" path="res://sprites/1 - Penguin/walking 2.png" id="8_0i614"]
-[ext_resource type="Texture2D" uid="uid://cdwem7uqad5k" path="res://sprites/1 - Penguin/walking 3.png" id="9_oprnr"]
-[ext_resource type="Texture2D" uid="uid://c772a4mgx6bem" path="res://sprites/1 - Penguin/walking 4.png" id="10_8rie4"]
+[ext_resource type="Texture2D" uid="uid://dlkgrfborrt7o" path="res://sprites/player/jump 3.png" id="2_ef06p"]
+[ext_resource type="Texture2D" uid="uid://bs1u3nvn5rxmg" path="res://sprites/player/jump 4.png" id="3_tjdhl"]
+[ext_resource type="Texture2D" uid="uid://v2t05k7jfdu" path="res://sprites/player/jump 1.png" id="4_x08pd"]
+[ext_resource type="Texture2D" uid="uid://n5wiwgf6n6ip" path="res://sprites/player/jump 2.png" id="5_dchgp"]
+[ext_resource type="Texture2D" uid="uid://bjtg6ge2crgvg" path="res://sprites/player/walking 1.png" id="6_kdgjc"]
+[ext_resource type="Texture2D" uid="uid://2xwvevobg7xs" path="res://sprites/player/walking 2.png" id="7_q0i8f"]
+[ext_resource type="Texture2D" uid="uid://cdwem7uqad5k" path="res://sprites/player/walking 3.png" id="8_0i614"]
+[ext_resource type="Texture2D" uid="uid://c772a4mgx6bem" path="res://sprites/player/walking 4.png" id="9_oprnr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u3f3p"]
 radius = 24.0
@@ -19,7 +18,7 @@ height = 114.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_tjdhl")
+"texture": ExtResource("2_ef06p")
 }],
 "loop": false,
 "name": &"duck",
@@ -27,7 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_tjdhl")
+"texture": ExtResource("2_ef06p")
 }],
 "loop": false,
 "name": &"fall",
@@ -35,7 +34,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_x08pd")
+"texture": ExtResource("2_ef06p")
 }],
 "loop": false,
 "name": &"hurt",
@@ -43,7 +42,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_x08pd")
+"texture": ExtResource("3_tjdhl")
 }],
 "loop": true,
 "name": &"idle",
@@ -51,16 +50,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_x08pd")
+}, {
+"duration": 1.0,
 "texture": ExtResource("5_dchgp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_kdgjc")
+"texture": ExtResource("2_ef06p")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_tjdhl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_q0i8f")
 }],
 "loop": true,
 "name": &"jump",
@@ -68,7 +67,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_tjdhl")
+"texture": ExtResource("2_ef06p")
 }],
 "loop": true,
 "name": &"slide",
@@ -76,7 +75,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_tjdhl")
+"texture": ExtResource("2_ef06p")
 }],
 "loop": true,
 "name": &"swimming",
@@ -84,16 +83,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_x08pd")
+"texture": ExtResource("6_kdgjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q0i8f")
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_0i614")
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_oprnr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_8rie4")
 }],
 "loop": true,
 "name": &"walk",
@@ -101,7 +100,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_kdgjc")
+"texture": ExtResource("2_ef06p")
 }],
 "loop": true,
 "name": &"wall",
@@ -127,7 +126,7 @@ z_index = 1
 position = Vector2(4.999999, -4)
 scale = Vector2(0.42331293, 0.2145059)
 sprite_frames = SubResource("SpriteFrames_i623q")
-animation = &"idle"
+animation = &"duck"
 
 [node name="Hitbox" type="Area2D" parent="."]
 z_index = 10

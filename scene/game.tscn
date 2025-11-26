@@ -12,9 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bes2p46skt65p" path="res://entities/skeleton.tscn" id="11_sng2h"]
 [ext_resource type="PackedScene" uid="uid://7ms54asnvg5f" path="res://scene/rock.tscn" id="11_ym5sv"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" groups=["Enemies", "Player"]]
 
-[node name="Player" parent="." groups=["player"] instance=ExtResource("1_5kiuu")]
+[node name="Player" parent="." instance=ExtResource("1_5kiuu")]
 position = Vector2(92, 370)
 
 [node name="onça" parent="." instance=ExtResource("3_ll5lq")]
