@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5k4gqxcmhg38"]
+
+[ext_resource type="Texture2D" uid="uid://bcodc1780tdmb" path="res://sprites/itens/laranja.png" id="1_ax8jp"]
+[ext_resource type="Script" uid="uid://edpuj0dlupv5" path="res://scripts/pegarlaranja_2d.gd" id="2_qfcwo"]
+[ext_resource type="Texture2D" uid="uid://bqwtrd6eaunl5" path="res://sprites/coleta/Copilot_20251125_210555 (1).png" id="3_p2oq3"]
+[ext_resource type="AudioStream" uid="uid://ciyv05o3ap2ly" path="res://entities/preview.mp3" id="4_06mis"]
+[ext_resource type="Texture2D" uid="uid://dfbfxr6sdk1vg" path="res://sprites/effects/particula laranja.png" id="4_lljk6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ax8jp"]
+radius = 19.026299
+
+[node name="laranja2d" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_qfcwo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_ax8jp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-1.0000019, -1)
+scale = Vector2(0.47368422, 0.43220338)
+texture = ExtResource("1_ax8jp")
+
+[node name="interagirpng" type="Sprite2D" parent="Area2D"]
+position = Vector2(1, -39)
+scale = Vector2(0.055664014, 0.05175782)
+texture = ExtResource("3_p2oq3")
+
+[node name="ColetaParticle" type="CPUParticles2D" parent="Area2D"]
+emitting = false
+amount = 14
+texture = ExtResource("4_lljk6")
+lifetime = 0.7
+direction = Vector2(1, 1)
+spread = 41.5
+
+[node name="ColetaSom" type="AudioStreamPlayer2D" parent="Area2D"]
+stream = ExtResource("4_06mis")

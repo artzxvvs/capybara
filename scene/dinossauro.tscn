@@ -1,0 +1,143 @@
+[gd_scene load_steps=21 format=3 uid="uid://3wf5dtsnxelq"]
+
+[ext_resource type="Texture2D" uid="uid://bxuqxd42hq45f" path="res://sprites/dino/Dinossauro_parado.png" id="1_l2c3s"]
+[ext_resource type="Script" uid="uid://drucqjt3vphw7" path="res://scene/dinossauro.gd" id="1_rulq3"]
+[ext_resource type="Texture2D" uid="uid://ci1jh303imnqw" path="res://sprites/dino/Dinossauro.png" id="2_rulq3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bondt"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(0, 0, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agbn1"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(201, 201, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwtly"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(0, 402, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qhcm"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(0, 201, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gj6yq"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(201, 0, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56rc6"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(0, 0, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkh8h"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(201, 0, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhvwe"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(0, 201, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb5sb"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(201, 201, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pxxk"]
+atlas = ExtResource("1_l2c3s")
+region = Rect2(0, 402, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu1an"]
+atlas = ExtResource("2_rulq3")
+region = Rect2(0, 0, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51xar"]
+atlas = ExtResource("2_rulq3")
+region = Rect2(201, 0, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3r1h"]
+atlas = ExtResource("2_rulq3")
+region = Rect2(0, 201, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upq4l"]
+atlas = ExtResource("2_rulq3")
+region = Rect2(201, 201, 201, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlncd"]
+atlas = ExtResource("2_rulq3")
+region = Rect2(0, 402, 201, 201)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_peoyc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bondt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agbn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwtly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qhcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gj6yq")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56rc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkh8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhvwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb5sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pxxk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yu1an")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51xar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3r1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upq4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlncd")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rulq3"]
+radius = 64.00781
+
+[node name="dinossauroat" type="Area2D"]
+script = ExtResource("1_rulq3")
+
+[node name="dinossauro" type="AnimatedSprite2D" parent="."]
+position = Vector2(105.5, 371.5)
+sprite_frames = SubResource("SpriteFrames_peoyc")
+animation = &"walk"
+
+[node name="dino" type="CollisionShape2D" parent="."]
+position = Vector2(119, 359)
+shape = SubResource("CircleShape2D_rulq3")

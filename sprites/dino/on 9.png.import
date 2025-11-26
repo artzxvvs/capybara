@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f1xakg0pdptb"
-path="res://.godot/imported/on 4.png-e0244ddd76876f7c9754bd271d9b4975.ctex"
+uid="uid://ce7oypswdlg2c"
+path="res://.godot/imported/on 9.png-e3bad81b220c37294045465c5b5041fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/onça/on 4.png"
-dest_files=["res://.godot/imported/on 4.png-e0244ddd76876f7c9754bd271d9b4975.ctex"]
+source_file="res://sprites/dino/on 9.png"
+dest_files=["res://.godot/imported/on 9.png-e3bad81b220c37294045465c5b5041fa.ctex"]
 
 [params]
 

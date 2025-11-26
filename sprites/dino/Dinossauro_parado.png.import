@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce7oypswdlg2c"
-path="res://.godot/imported/on 9.png-ea66a6bdc2dac0c1bbf4f3ba8f82c10d.ctex"
+uid="uid://bxuqxd42hq45f"
+path="res://.godot/imported/Dinossauro_parado.png-7740551e2bbe3091e2026da8676fa20b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/onça/on 9.png"
-dest_files=["res://.godot/imported/on 9.png-ea66a6bdc2dac0c1bbf4f3ba8f82c10d.ctex"]
+source_file="res://sprites/dino/Dinossauro_parado.png"
+dest_files=["res://.godot/imported/Dinossauro_parado.png-7740551e2bbe3091e2026da8676fa20b.ctex"]
 
 [params]
 

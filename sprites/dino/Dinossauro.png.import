@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpcadp64y7nnr"
-path="res://.godot/imported/on 6.png-5ada1dbd75f373e7424be8904393610f.ctex"
+uid="uid://ci1jh303imnqw"
+path="res://.godot/imported/Dinossauro.png-8b792e7f3f4d697701595950f0211fb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/onça/on 6.png"
-dest_files=["res://.godot/imported/on 6.png-5ada1dbd75f373e7424be8904393610f.ctex"]
+source_file="res://sprites/dino/Dinossauro.png"
+dest_files=["res://.godot/imported/Dinossauro.png-8b792e7f3f4d697701595950f0211fb2.ctex"]
 
 [params]
 

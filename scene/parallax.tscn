@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bkl3mftuwau3q" path="res://sprites/background/ceu.webp" id="1_veugv"]
 [ext_resource type="Texture2D" uid="uid://dlnji58xd0umi" path="res://sprites/background/ceu.png" id="2_veugv"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_43crk"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_veugv"]
+distance = 7.0
 
 [node name="parallex" type="Node2D"]
 
@@ -32,5 +33,5 @@ centered = false
 [node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/StaticBody2D"]
-position = Vector2(97, 411)
-shape = SubResource("WorldBoundaryShape2D_43crk")
+position = Vector2(85, 422)
+shape = SubResource("WorldBoundaryShape2D_veugv")

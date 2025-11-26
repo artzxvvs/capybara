@@ -1,2 +1,4 @@
 extends Node
-var  vidas:int=3
+
+var vida_max:int = 3
+var vidas:int = 3
